@@ -5,6 +5,7 @@ class MyApp extends StatefulWidget {
 
   static const MyApp _instance = MyApp._internal();
 
+  // factory constructor to apply singleton design pattern
   factory MyApp() => _instance;
 
   @override
