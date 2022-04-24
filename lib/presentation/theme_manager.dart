@@ -26,5 +26,22 @@ ThemeData get appTheme {
         fontSize: FontSize.s16,
       ),
     ),
+    buttonTheme: ButtonThemeData(
+      shape: const StadiumBorder(),
+      disabledColor: ColorManager.grey1,
+      buttonColor: ColorManager.primary,
+      splashColor: ColorManager.lightPrimary,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        shape: MaterialStateProperty.all(const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(AppSize.s12)))),
+        backgroundColor: MaterialStateProperty.all(ColorManager.primary),
+        foregroundColor: MaterialStateProperty.all(ColorManager.white),
+        textStyle: MaterialStateProperty.all(
+          getRegularStyle(color: ColorManager.white, fontSize: FontSize.s17),
+        ),
+      ),
+    ),
   );
 }
